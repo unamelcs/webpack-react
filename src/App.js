@@ -18,8 +18,6 @@ export default class App extends Component {
     return (
       <div>
         <h1>{count}</h1>
-
-
         ssfs
         <button type="default" onClick={() => this.add()}>增加1</button>
       </div>
