@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import  Hello  from 'z-test-lcs'
 
 export default class App extends Component {
   constructor(props) {
@@ -18,7 +19,9 @@ export default class App extends Component {
     return (
       <div>
         <h1>{count}</h1>
+        <Hello />
         ssfs
+        <h1>sdwdsdfadzd</h1>
         <button type="default" onClick={() => this.add()}>增加1</button>
       </div>
     )
