@@ -2,13 +2,7 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 module.exports = {
-  
-  devtool: 'cheap-module-eval-source-map',
   entry: [
-    // 'babel-polyfill',
-    // 'react-hot-loader/patch',
-    // 'webpack-dev-server/client?http://localhost:9090',
-    // 'webpack/hot/only-dev-server',
     path.resolve(__dirname, '../src/index.js'), // 指定入口文件，程序从这里开始编译,__dirname当前所在目录, ../表示上一级目录, ./同级目录
   ],
   output: {
@@ -35,6 +29,6 @@ module.exports = {
       template: path.resolve(__dirname, '../src/index.template.html'),
       inject: true
     }),
-    new CleanWebpackPlugin(['dist']), // 在每次构建前清理 /dist 文件夹
+    new CleanWebpackPlugin(['../dist']), // 在每次构建前清理 /dist 文件夹
   ]
 }

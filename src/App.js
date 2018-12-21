@@ -20,8 +20,7 @@ export default class App extends Component {
       <div>
         <h1>{count}</h1>
         <Hello />
-        ssfs
-        <h1>sdwdsdfadzd</h1>
+        <h1>4445sfd</h1>
         <button type="default" onClick={() => this.add()}>增加1</button>
       </div>
     )
