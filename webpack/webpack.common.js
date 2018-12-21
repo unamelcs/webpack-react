@@ -1,9 +1,9 @@
 const path = require('path')
-const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 module.exports = {
   entry: [
+    'babel-polyfill', // 它会仿效一个完整的 ES2015+ 环境，并意图运行于一个应用中而不是一个库/工具
     path.resolve(__dirname, '../src/index.js'), // 指定入口文件，程序从这里开始编译,__dirname当前所在目录, ../表示上一级目录, ./同级目录
   ],
   output: {
