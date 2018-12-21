@@ -1,4 +1,5 @@
 const path = require('path')
+const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 module.exports = {
@@ -30,5 +31,21 @@ module.exports = {
       inject: true
     }),
     new CleanWebpackPlugin(['../dist']), // 在每次构建前清理 /dist 文件夹
-  ]
+  ],
+  optimization: {// CommonsChunkPlugin 替代 //代码分离
+    splitChunks: {
+      cacheGroups: {
+        // commons: {
+        //   name: 'commons',
+        //   chunks: 'initial',
+        //   minChunks: 2
+        // },
+        commons: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all'
+        }
+      }
+    }
+  },
 }
